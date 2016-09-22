@@ -15,8 +15,8 @@
     4. 生成的协议保存为python tuple，可直接加载。每个field生成为(key, type, sub_field)，其中sub_field只对list/dict这种复活数据类型有效。
 
 ## Example
-    输入数据为  
-<pre><code>
+输入数据为  
+```
 data = {  
     'a' : 1,   
     'b' : 1.5,   
@@ -33,11 +33,10 @@ data = {
     'ccc' : None,   
     'userid' : 100010000032  
 }    
-
-</code></pre>
+```
 
 则生成的协议为    
-<pre><code>
+```
 proto = [
     ('a', 16, None), 
     ('c', 2, None), 
@@ -56,7 +55,7 @@ proto = [
     ('ccc', 10, None), 
     ('userid', 18, None)
 ]
-</code></pre>   
+```  
 其中类型定义与bson基本保持一致
 
 ## TODO
